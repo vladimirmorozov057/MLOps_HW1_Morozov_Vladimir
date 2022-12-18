@@ -93,7 +93,7 @@ class Train(Resource):
         data = clean_data(data)
         X = data.drop(['target'], axis=1)
         y = data['target']
-        models.fit(X, y)
+        base_model.fit(X, y)
         train_res_save = "train_res/" + args.hyperparameters[
                                            args.hyperparameters.find(
                                                '/') + 1:args.hyperparameters.rfind(
@@ -118,7 +118,7 @@ class Train(Resource):
     def load_model(model_path):
 
         # Загружаю параметры модели
-        full_path = os.getcwd() + '/' + model_path
+        full_path = os.getcwd() + "/" + model_path
 
         with open(full_path, 'r') as JSON:
             model_params = json.load(JSON)
