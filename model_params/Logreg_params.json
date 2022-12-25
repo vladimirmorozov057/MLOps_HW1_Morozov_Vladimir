@@ -1,1 +1,5 @@
-{"penalty":"l2", "C": 0.8, "fit_intercept": "True"}
+{"penalty":"l2", "C": 0.8, "fit_intercept": True}
+
+{
+  "hyperparameters": "{\"penalty\":\"l2\", \"C\": 0.8, \"fit_intercept\": True}"
+}
